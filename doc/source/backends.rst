@@ -5,7 +5,7 @@ Testinfra comes with several connections backends for remote command
 execution.
 
 When installing, you should select the backends you require as
-``extras`` to ensure Python dependencies are satisifed (note various
+``extras`` to ensure Python dependencies are satisfied (note various
 system packaged tools may still be required).  For example ::
 
     $ pip install testinfra[ansible,salt]
@@ -68,8 +68,8 @@ This is a pure SSH backend using the ``ssh`` command. Example::
     $ py.test --hosts='ssh://server?timeout=60&controlpersist=120'
 
 
-By default timeout is set to 10 seconds and ControlPersist is set to 60 seconds.
-You can disable persistent connection by passing `controlpersist=0` to the options.
+By default timeout is set to 10 seconds and ``ControlPersist`` is set to 60 seconds.
+You can disable persistent connection by passing ``controlpersist=0`` to the options.
 
 
 salt

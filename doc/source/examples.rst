@@ -1,10 +1,10 @@
 Examples
 ========
 
-Parametrize your tests
-~~~~~~~~~~~~~~~~~~~~~~
+Parameterize your tests
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Pytest support `test parametrization <https://pytest.org/latest/parametrize.html>`_::
+Pytest support `test parametrization <https://docs.pytest.org/en/latest/reference.html#pytest-mark-parametrize>`_::
 
     # BAD: If the test fails on nginx, python is not tested
     def test_packages(host):
@@ -58,8 +58,8 @@ Testinfra can be used with the standard Python unit test framework `unittest
 
         def test_nginx_service(self):
             service = self.host.service("nginx")
-            self.assertTrue(service.is_running)
-            self.assertTrue(service.is_enabled)
+            self.assertIs(service.is_enabled, True)
+            self.assertIs(service.is_running, True)
 
 
     if __name__ == "__main__":
@@ -137,8 +137,8 @@ Integration with KitchenCI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 KitchenCI (aka Test Kitchen) can use testinfra via its :code:`shell` verifier.
-Add the following to your :code:`.kitchen.yml`, this requires installing `paramiko` 
-additionaly (on your host machine, not in the VM handled by kitchen) ::
+Add the following to your :code:`.kitchen.yml`, this requires installing `paramiko`
+additionally (on your host machine, not in the VM handled by kitchen) ::
 
     verifier:
       name: shell
