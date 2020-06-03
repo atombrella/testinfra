@@ -39,6 +39,10 @@ host
 
        :class:`testinfra.modules.file.File` class
 
+    .. attribute:: firewalld
+
+       :class:`testinfra.modules.firewalld.Firewalld` class
+
     .. attribute:: group
 
        :class:`testinfra.modules.group.Group` class
@@ -143,6 +147,12 @@ File
    :undoc-members:
    :exclude-members: get_module_class
 
+FirewallD
+~~~~~~~~~
+
+.. autoclass:: testinfra.modules.firewalld.Firewall
+   :members:
+   :undoc-members:
 
 Group
 ~~~~~

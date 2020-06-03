@@ -538,6 +538,10 @@ def test_ip6tables(host):
         assert '-P INPUT ACCEPT' in v6_filter_rules
 
 
+def test_firewalld(host):
+    pass
+
+
 @all_images
 def test_addr(host):
     non_resolvable = host.addr('some_non_resolvable_host')

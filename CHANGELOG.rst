@@ -6,6 +6,7 @@ Changelog
 =====
 
 * Breaking change:  host.file().listdir() is now a method
+* Add `FirewallD <https://firewalld.org/>`_ module.
 
 4.1.0
 =====
